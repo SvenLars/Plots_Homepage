@@ -8,3 +8,7 @@ ggplot(data.frame(
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
     panel.background = element_blank())
 
+ggplot(
+  diamonds,aes(color,color=color, fill = color, alpha = cut)) + 
+  geom_bar(stat="count", show.legend = F) + coord_polar() + 
+  theme(panel.background = element_rect(fill = "lightgrey")) + xlab("Group")
