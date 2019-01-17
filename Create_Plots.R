@@ -4,11 +4,11 @@ ggplot(data.frame(
 ), aes(x = Go_1, y = Go_2)
 ) + 
   geom_hex() + 
-  scale_fill_distiller(palette= "Spectral", direction=1) +
+  scale_fill_distiller(palette= "Spectral", direction = 1) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
     panel.background = element_blank())
 
-ggplot(
-  diamonds,aes(color,color=color, fill = color, alpha = cut)) + 
-  geom_bar(stat="count", show.legend = F) + coord_polar() + 
-  theme(panel.background = element_rect(fill = "lightgrey")) + xlab("Group")
+ggplot(diamonds, aes(color,color=color, fill = color, alpha = cut)) + 
+  geom_bar(stat="count") + coord_polar() + 
+  theme(panel.background = element_rect(fill = "lightgrey")) + xlab("Group") +
+  guides(fill = F, color = F)
